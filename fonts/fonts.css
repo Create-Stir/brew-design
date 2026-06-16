@@ -1,0 +1,101 @@
+/**
+ * Brew typography — @font-face declarations
+ * Import this file in any preview app, or upload the fonts/ folder to Claude Design.
+ *
+ * Tailwind class → CSS variable → file
+ *   font-swisse      → --font-swisse      → Suise.ttf
+ *   font-swisse-med  → --font-swisse-med  → SuiseMed.otf
+ *   font-helvetica   → --font-helvetica   → Helvetica.ttf
+ *   font-instrument-serif → --font-instrument-serif → InstrumentSerif-*.woff2
+ *   font-archivo-black    → --font-archivo-black    → ArchivoBlack-Regular.woff2
+ *   font-geist            → --font-geist            → Geist-*.woff2
+ */
+
+/* ─── Suisse / Suise (custom Brew fonts) ─────────────────────── */
+@font-face {
+  font-family: "Suise";
+  src: url("./Suise.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suise Med";
+  src: url("./SuiseMed.otf") format("opentype");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Brew";
+  src: url("./Helvetica.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Google Fonts (bundled as woff2) ────────────────────────── */
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./InstrumentSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./InstrumentSerif-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("./ArchivoBlack-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("./Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("./Geist-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── CSS variables (matches vod-frontend layout.tsx) ─────────── */
+:root {
+  --font-swisse: "Suise", ui-sans-serif, system-ui, sans-serif;
+  --font-swisse-med: "Suise Med", "Suise", ui-sans-serif, system-ui, sans-serif;
+  --font-helvetica: "Helvetica Brew", Helvetica, Arial, sans-serif;
+  --font-instrument-serif: "Instrument Serif", Georgia, serif;
+  --font-archivo-black: "Archivo Black", ui-sans-serif, system-ui, sans-serif;
+  --font-geist: "Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ─── Utility classes (when not using Tailwind) ─────────────── */
+.font-swisse { font-family: var(--font-swisse); }
+.font-swisse-med { font-family: var(--font-swisse-med); }
+.font-helvetica { font-family: var(--font-helvetica); }
+.font-instrument-serif { font-family: var(--font-instrument-serif); }
+.font-archivo-black { font-family: var(--font-archivo-black); }
+.font-geist { font-family: var(--font-geist); }
+
+/* Default body — Suise Regular, NOT system-ui */
+body {
+  font-family: var(--font-swisse);
+}

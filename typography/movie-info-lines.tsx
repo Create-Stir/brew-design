@@ -18,12 +18,14 @@ export function MovieInfoLinesSample() {
   };
 
   const runtime = "1h 46m";
-  const infoLine = [movie.year, runtime, ...movie.genres.slice(0, 2)].join(" · ");
+  const infoLine = [movie.year, runtime, ...movie.genres.slice(0, 2), "India"].join(" · ");
 
   return (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/70">
-      {/* Main info line */}
-      <span>{infoLine}</span>
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/70 font-swisse">
+      {/* Main info line — MUST use font-swisse (Suise.ttf), not system-ui */}
+      <span className="text-xs md:text-sm font-swisse font-medium tracking-tighter text-white/60">
+        {infoLine}
+      </span>
 
       {/* Content rating badge */}
       {movie.content_rating && (

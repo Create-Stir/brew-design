@@ -30,6 +30,7 @@ Login dialog uses **text** ("Watch / Hidden / Gems") on non-US routes, not the s
 
 | Folder | Contents |
 |--------|----------|
+| `fonts/` | **Suise.ttf, SuiseMed.otf, Instrument Serif, Archivo Black, Geist** + fonts.css |
 | `brand-assets.ts` | All logo URLs, sizes, usage map |
 | `logos/` | Brand logo visual samples (header, footer, Brew+, app badges) |
 | `cards/` | MovieCard (landscape, portrait, VHS), library card, cast card, director card, ending-screen card |
@@ -52,11 +53,16 @@ Login dialog uses **text** ("Watch / Hidden / Gems") on non-US routes, not the s
 
 - **Primary accent:** `stir-yellow` (#ffc15e)
 - **Secondary accents:** `stir-blue`, `stir-purple`, `stir-orange`
-- **Display font:** `font-swisse-med`
-- **Body font:** `font-swisse` / `font-geist`
+- **Display font:** `font-swisse-med` → `fonts/SuiseMed.otf`
+- **Body font:** `font-swisse` → `fonts/Suise.ttf` (NOT system-ui — use on all metadata/body text)
+- **Editorial:** `font-instrument-serif` → `fonts/InstrumentSerif-*.woff2`
+- **Brew+ logo:** `font-archivo-black` + `font-instrument-serif italic`
+- **Labels:** `font-geist` → Subtext badges
 - **Background:** dark (`bg-black`, `bg-zinc-900`, gradients from backdrop)
 - **Cards:** `rounded-xl`, `border border-white/10`, `bg-white/5`
 - **Badges:** clipped corner (`rounded-br-none`), uppercase, bold
+
+See **`fonts/README.md`** for full typography guide. Upload the **`fonts/`** folder to Claude Design.
 
 ## Sample data types
 
